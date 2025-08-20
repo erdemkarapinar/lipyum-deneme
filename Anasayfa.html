@@ -130,8 +130,21 @@
 
             .ana-buttons {
                 margin-top: 25px;
-                color: #2c3e50;
             }
+            .my-button {
+                background-color: #007bff; /* Buton rengi (mavi) */
+                color: white;              /* Yazı rengi */
+                padding: 10px 20px;        /* İç boşluk */
+                border: none;              /* Kenarlık yok */
+                border-radius: 5px;        /* Köşeleri yuvarla */
+                cursor: pointer;           /* Fare üzerine gelince işaretçi */
+                font-size: 16px;           /* Yazı boyutu */
+                transition: background-color 0.3s; /* Hover efektini yumuşat */
+                }
+
+                .my-button:hover {
+                background-color: #0056b3; /* Fareyle üzerine gelince koyulaşır */
+                }
             .section {
                 padding: 50px 0;
             }
@@ -286,8 +299,7 @@
                     <h1 id="service-title">Profesyonel Beyaz Eşya ve Elektronik Cihaz Tamiriniz Yapılır</h1>
                     <p id="service-desc">Profesyonel Beyaz Eşya ve Elektronik Cihaz Tamiri. Uzman ekibimizle tüm beyaz eşya ve elektronik cihazlarınız için güvenilir, hızlı ve uygun fiyatlı tamir, bakım ve onarım hizmetleri sunuyoruz. Buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi ve televizyon gibi tüm cihazlarınızda oluşan arızalar için profesyonel çözümler.</p>
                     <div class="ana-buttons">
-                        <p>Hemen Ara:</p>
-                        <p>05555555555</p>
+                        <button class="my-button">Hemen Arayın: 05555555555</button>
                     </div>
                 </div>
             </section>
