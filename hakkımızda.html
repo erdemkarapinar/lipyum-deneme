@@ -173,16 +173,19 @@
         }
 
 
-        .ana {
-            background-color: var(--light-bg);
-            text-align: center;
-            padding: 60px 20px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        .hakkimizda {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            /* Kartların aynı hizada olması için */
+            flex-direction: column;
+            /* İçeriği dikey sırala */
         }
 
-        .ana-buttons {
+        .hakkimizda-buttons {
             margin-top: 25px;
         }
 
@@ -262,14 +265,14 @@
             </ul>
         </nav>
     </header>
-    <section class="ana">
+    <section class="hakkimizda">
         <div class="container">
             <h1 id="service-title">Profesyonel Beyaz Eşya ve Elektronik Cihaz Tamiriniz Yapılır</h1>
             <p id="service-desc">Profesyonel Beyaz Eşya ve Elektronik Cihaz Tamiri. Uzman ekibimizle tüm beyaz eşya ve
                 elektronik cihazlarınız için güvenilir, hızlı ve uygun fiyatlı tamir, bakım ve onarım hizmetleri
                 sunuyoruz. Buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi ve televizyon gibi tüm
                 cihazlarınızda oluşan arızalar için profesyonel çözümler.</p>
-            <div class="ana-buttons">
+            <div class="hakkimizda-buttons">
                 <button class="my-button"><a onclick="window.location.href='tel:+905555555555'"
                         style="color: white; text-decoration: none; font-size: 18px; padding: 5px 10px;">Hemen Arayın:
                         0555 555 55 55 📞</a></button>
