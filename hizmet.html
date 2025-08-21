@@ -1,450 +1,576 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ana Sayfa | Lipyum Teknik Servis</title>
-        <meta name="description" content="Beyaz eşya, buzdolabı, çamaşır makinesi, klima ve kombi tamir bakım hizmetleri.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
-        <style>
-                html, body {
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa | Lipyum Teknik Servis</title>
+    <meta name="description" content="Beyaz eşya, buzdolabı, çamaşır makinesi, klima ve kombi tamir bakım hizmetleri.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
             margin: 0;
             padding: 0;
-             font-family: 
-                -apple-system,      /* macOS ve iOS */
-                BlinkMacSystemFont, /* Chrome (macOS) */
-                "Segoe UI",         /* Windows */
-                Roboto,             /* Android */
-                Oxygen, Ubuntu, Cantarell, "Open Sans", /* Linux dağıtımları */
-                Helvetica, Arial,   /* Eski fallback */
-                sans-serif;         /* En son garanti fallback */
+            font-family:
+                -apple-system,
+                /* macOS ve iOS */
+                BlinkMacSystemFont,
+                /* Chrome (macOS) */
+                "Segoe UI",
+                /* Windows */
+                Roboto,
+                /* Android */
+                Oxygen, Ubuntu, Cantarell, "Open Sans",
+                /* Linux dağıtımları */
+                Helvetica, Arial,
+                /* Eski fallback */
+                sans-serif;
+            /* En son garanti fallback */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-            .navbar {
-                list-style: none;
-                display: flex;
-                gap: 20px;
-                background: #2c3e50;
-                padding: 0px;
-                margin: 0;
-                width: 100%;
-            }
 
-            .navbar li {
-                position: relative;
-                margin-top: 15px;
-                margin-left: 10px;
-            }
+        .navbar {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            background: #2c3e50;
+            padding: 0px;
+            margin: 0;
+            width: 100%;
+        }
 
-            .navbar a {
-                color: white;
-                text-decoration: none;
-                padding: 8px 12px;
-                display: block;
-            }
+        .navbar li {
+            position: relative;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
 
-            .navbar a:hover {
-                background: #555;
-                border-radius: 4px;
-            }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+        }
 
-            /* Dropdown menü */
-            .dropdown {
-                position: relative;
-            }
+        .navbar a:hover {
+            background: #555;
+            border-radius: 4px;
+        }
 
-            /* Alt menü gizli */
-            .submenu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background: #2c3e50;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                min-width: 200px;
-                z-index: 1000;
-            }
+        /* Dropdown menü */
+        .dropdown {
+            position: relative;
+        }
 
-            /* Alt menü öğeleri */
-            .submenu li a {
-                display: block;
-                padding: 10px;
-                color: white;
-                text-decoration: none;
-            }
+        /* Alt menü gizli */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #2c3e50;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 200px;
+            z-index: 1000;
+        }
 
-            .submenu li a:hover {
-                background: #666;
-            }
+        /* Alt menü öğeleri */
+        .submenu li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
 
-            /* Hover ile açma */
-            .dropdown:hover .submenu {
-                display: block;
-            }
+        .submenu li a:hover {
+            background: #666;
+        }
 
-            .navbar h1 {
-                color: white;
-            }
-            footer {
-                background-color: #2c3e50;
-                color: white;
-                padding: 50px 0 20px;
-            }
+        /* Hover ile açma */
+        .dropdown:hover .submenu {
+            display: block;
+        }
 
-            .footer-content {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                gap: 40px;
-                margin-bottom: 40px;
-            }
+        .navbar h1 {
+            color: white;
+        }
 
-            .footer-column h3 {
-                font-size: 1.2rem;
-                margin-bottom: 20px;
-                color: #fff;
-                position: relative;
-                margin-left: 40px;
-            }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 0 20px;
+        }
 
-            .footer-column h3::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -8px;
-                width: 30px;
-                height: 2px;
-                background-color: var(--accent-color);
-            }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
 
-            .footer-column ul {
-                list-style: none;
-            }
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            margin-left: 40px;
+        }
 
-            .footer-column ul li {
-                margin-bottom: 10px;
-            }
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
 
-            .footer-column a {
-                color: var(--footer-text);
-                opacity: 0.8;
-                transition: opacity 0.2s;
-                text-decoration: none;
-            }
+        .footer-column ul {
+            list-style: none;
+        }
 
-            .footer-column a:hover {
-                opacity: 1;
-                color: var(--accent-color); /* Hover rengi vurgu rengi oldu */
-            }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
 
-            .footer-column p {
-                opacity: 0.8;
-            }
+        .footer-column a {
+            color: var(--footer-text);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            text-decoration: none;
+        }
 
-            .footer-column p svg {
-                vertical-align: middle;
-                margin-right: 8px;
-                fill: var(--accent-color);
-            }
+        .footer-column a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+            /* Hover rengi vurgu rengi oldu */
+        }
 
-            .ana {
-                background-color: var(--light-bg);
-                text-align: center;
-                padding: 60px 20px;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                transition: 0.3s;
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            }
+        .footer-column p {
+            opacity: 0.8;
+        }
 
-            .ana-buttons {
-                margin-top: 25px;
-            }
-            .my-button {
-                background-color: #2F4F4F; /* Buton rengi (mavi) */
-                color: white;              /* Yazı rengi */
-                padding: 10px 20px;        /* İç boşluk */
-                border: none;              /* Kenarlık yok */
-                border-radius: 5px;        /* Köşeleri yuvarla */
-                cursor: pointer;           /* Fare üzerine gelince işaretçi */
-                font-size: 16px;           /* Yazı boyutu */
-                transition: background-color 0.3s; /* Hover efektini yumuşat */
-                }
+        .footer-column p svg {
+            vertical-align: middle;
+            margin-right: 8px;
+            fill: var(--accent-color);
+        }
 
-                .my-button:hover {
-                background-color: #2F4F4F; /* Fareyle üzerine gelince koyulaşır */
-                }
-            .section {
-                background-color: #ecf0f1;
-                text-align: center;
-                padding: 60px 20px;
-            }
+        .ana {
+            background-color: var(--light-bg);
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
 
-            .section-title {
-                text-align: center;
-                margin-bottom: 40px;
-            }
+        .ana-buttons {
+            margin-top: 25px;
+        }
 
-            .section-title::after {
-                content: '';
-                display: block;
-                width: 60px;
-                height: 3px;
-                background-color: var(--accent-color);
-                margin: 10px auto 0;
-            }
-            .service-cards {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 25px;
-            }
+        .my-button {
+            background-color: #2F4F4F;
+            /* Buton rengi (mavi) */
+            color: white;
+            /* Yazı rengi */
+            padding: 10px 20px;
+            /* İç boşluk */
+            border: none;
+            /* Kenarlık yok */
+            border-radius: 5px;
+            /* Köşeleri yuvarla */
+            cursor: pointer;
+            /* Fare üzerine gelince işaretçi */
+            font-size: 16px;
+            /* Yazı boyutu */
+            transition: background-color 0.3s;
+            /* Hover efektini yumuşat */
+        }
 
-            .card {
-                border: 1px solid var(--border-color);
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-                transition: transform 0.2s, box-shadow 0.2s;
-                display: flex; /* Kartların aynı hizada olması için */
-                flex-direction: column; /* İçeriği dikey sırala */
-            }
+        .my-button:hover {
+            background-color: #2F4F4F;
+            /* Fareyle üzerine gelince koyulaşır */
+        }
 
-            .card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            }
+        .section {
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 60px 20px;
+        }
 
-            .card-body {
-                padding: 25px;
-                display: flex;
-                flex-direction: column;
-                flex-grow: 1; /* Kartın tüm yüksekliğini kaplamasını sağlar */
-            }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-            .card-body p {
-                flex-grow: 1; /* Paragrafın esnek büyümesini sağlar */
-                margin-bottom: 20px;
-            }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
 
-            .card-title {
-                font-size: 1.25rem;
-                margin-bottom: 15px;
-            }
-            .review-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 20px;
-            }
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-            .review-card {
-                background: var(--light-bg);
-                border-left: 4px solid var(--accent-color);
-                border-radius: 4px;
-                padding: 20px;
-            }
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            /* Kartların aynı hizada olması için */
+            flex-direction: column;
+            /* İçeriği dikey sırala */
+        }
 
-            .rating {
-                color: var(--accent-color);
-                font-size: 1.1rem;
-                margin-bottom: 10px;
-            }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
 
-            .review-author {
-                font-size: 0.95em;
-                color: #555;
-                margin-top: 15px;
-                text-align: right;
-                font-style: italic;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-                <nav>
-                    <ul class="navbar">
-                        <h1 style="margin-left: 10px;">Lipyum Teknik Servis</h1>
+        .card-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            /* Kartın tüm yüksekliğini kaplamasını sağlar */
+        }
+
+        .card-body p {
+            flex-grow: 1;
+            /* Paragrafın esnek büyümesini sağlar */
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .review-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .review-card {
+            background: var(--light-bg);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .rating {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .review-author {
+            font-size: 0.95em;
+            color: #555;
+            margin-top: 15px;
+            text-align: right;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <h1 style="margin-left: 10px;">Lipyum Teknik Servis</h1>
+                <li><a href="Anasayfa.html">Anasayfa</a></li>
+                <li class="dropdown">
+                    <a href="hizmet.html">Hizmetlerimiz ▼</a>
+                    <ul class="submenu">
+                        <li><a href="/hizmet?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
+                        <li><a href="/hizmet?service=Buzdolabı">Buzdolabı</a></li>
+                        <li><a href="/hizmet?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
+                        <li><a href="/hizmet?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
+                    </ul>
+                </li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                <li><a href="iletişim.html">İletişim</a></li>
+                <li><a href="gizlilik.html">Gizlilik</a></li>
+                <li><a href="kvkk.html">KVKK</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="ana">
+        <div class="container">
+            <h1 id="service-title">Beyaz Eşya ve Elektronik Cihaz Servisi</h1>
+            <p id="service-desc">Garantisi bitmiş cihazlarınızda oluşan arızalar için profesyonel çözümler.</p>
+            <div class="ana-buttons">
+                <button class="my-button"><a href="Anasayfa?service=Hemen+Arayın+0555+555+55+55"
+                        style="color: white; text-decoration: none;">Hemen Arayın: 0555 555 55 55</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="service-content" style="display: block;">
+                <div class="main-content">
+                    <article>
+                        <div id="makale-alani">
+                            <aside class="sidebar">
+                                <h2 class="mb-2">Kullanıcı Yorumları</h2>
+                                <div class="review-list">
+                                    <div class="review-card">
+                                        <div class="rating">★★★★★</div>
+                                        <p>Çamaşır makinemi çok hızlı bir şekilde tamir ettiler. Profesyonel ve uygun
+                                            fiyatlı bir hizmet aldım.</p>
+                                        <div class="review-author">Ayşe Y. - 10.06.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★★</div>
+                                        <p>Buzdolabımdaki arıza için aynı gün hizmet aldım. Teknik ekip çok bilgili ve
+                                            yardımcıydı.</p>
+                                        <div class="review-author">Mehmet K. - 22.07.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★☆</div>
+                                        <p>Klimamın bakımı için geldiler. İşlerini düzgün yapıyorlar ama randevu
+                                            saatinde küçük bir gecikme oldu.</p>
+                                        <div class="review-author">Zeynep A. - 15.08.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★★</div>
+                                        <p>Televizyonumun ekranında oluşan sorun hızlı bir şekilde çözüldü. Teşekkürler!
+                                        </p>
+                                        <div class="review-author">Ali T. - 03.09.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★★</div>
+                                        <p>Bulaşık makinemizdeki su kaçağı sorunu aynı gün giderildi. Uygun fiyat ve
+                                            kaliteli hizmet.</p>
+                                        <div class="review-author">Fatma G. - 28.09.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★☆</div>
+                                        <p>Fırınımın ısıtma problemi için servis çağırdım. Sorunu tespit edip çözdüler.
+                                        </p>
+                                        <div class="review-author">Hasan B. - 12.10.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★★</div>
+                                        <p>Kombimizin yıllık bakımı için tercih ettik. Çok memnun kaldık, kesinlikle
+                                            tavsiye ederim.</p>
+                                        <div class="review-author">Aylin M. - 05.11.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★★</div>
+                                        <p>Buzdolabının motor arızası için aradım, aynı gün gelip tamir ettiler.
+                                            Profesyonel hizmet.</p>
+                                        <div class="review-author">Mustafa Y. - 19.11.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★☆</div>
+                                        <p>Çamaşır makinesinin program sorunu vardı. Uygun fiyata hallettiler.</p>
+                                        <div class="review-author">Seda K. - 07.12.2024</div>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="rating">★★★★★</div>
+                                        <p>Televizyonumuzun ses sorunu için geldiler. Hızlı ve etkili çözüm sundular.
+                                        </p>
+                                        <div class="review-author">Emre A. - 22.12.2024</div>
+                                    </div>
+                                </div>
+                            </aside>
+                            <section class="makale-bolum" data-bolum="1">
+                                <h1>
+                                    İçindekiler
+                                </h1>
+                                <p>1.Beyaz Eşya Alırken Enerji Verimliliği Neden Önemli</p>
+                                <p>2.Ev Aletleri Seçiminde Bütçe Nasıl Planlanmalı</p>
+                                <p>3.Beyaz Eşya Satın Alma Rehberi: Garanti Koşulları Nelerdir</p>
+                                <p>4.Yeni Beyaz Eşya Alırken Servis Ağına Dikkat Etmek Neden Gerekli</p>
+                                <p>5.Beyaz Eşya Kullanım Kılavuzu: Montaj Nasıl Yapılır</p>
+                                <p>6.Beyaz Eşya Alırken Hangi Özelliklere Öncelik Vermeliyim</p>
+                                <p>7.Ev Aletleri Seçiminde Tasarımın Önemi Nedir</p>
+                                <p>8.Beyaz Eşya Satın Alma Rehberi: Kampanyaları Nasıl Takip Ederim</p>
+                                <p>9.Yeni Beyaz Eşya Alırken İhtiyaç Analizi Nasıl Yapılır</p>
+                                <p>10. Beyaz Eşya Kullanım Kılavuzu: Temizlik ve Bakım İpuçları</p>
+
+                                <p>
+                                    Beyaz Eşyalar Hakkında Nelere Dikkat Edilmeli konusu, ev sahipleri için büyük önem
+                                    taşır.
+                                    Beyaz eşya alırken dikkat edilmesi gerekenler arasında, ürünlerin enerji verimliliği
+                                    öne çıkar. Enerji sınıfı, elektrik faturasını etkileyen önemli bir faktördür.
+                                    Düşük enerji tüketimi sunan ürünler, uzun vadede tasarruf sağlar.
+                                    Ayrıca, marka ve model seçimi de satın alma sürecinde önemli bir etkendir.
+                                    Güvenilir markalar, genellikle daha iyi bir hizmet sunar.
+                                    Yeni beyaz eşya alırken, ürünlerin garanti süresi ve servis ağı da dikkat edilmesi
+                                    gereken unsurlardandır.
+                                    Uzun ömürlü ve sorunsuz bir kullanım için bu detaylar göz önünde bulundurulmalıdır.
+                                    Ev aletleri seçiminde ipuçları, doğru tercih yapmanıza yardımcı olur.
+                                    Farklı markaların sunduğu özellikleri karşılaştırmak faydalıdır.
+                                    Örneğin, buzdolabı alırken boyut, iç hacim ve bölüm sayısı gibi unsurlar önem taşır.
+                                    Beyaz eşya satın alma rehberi, ihtiyaçlarınıza uygun tercih yapmanızda yol gösterir.
+                                    Kullanım kılavuzu ise cihazların performansını en üst düzeye çıkarır. Yeni beyaz
+                                    eşyalar, kullanıcılara pek çok kolaylık sunar; ancak bunları doğru seçmek önemlidir.
+                                    Beyaz eşyalar hakkında doğru bilgiye ulaşmak, sağlıklı bir seçim yapmanıza katkı
+                                    sağlar.
+                                </p>
+                                <h1>Beyaz Eşyalar Hakkında Nelere Dikkat Edilmeli</h1>
+                                <p>
+                                    Eğer yeni beyaz eşyalar almak istiyorsan birkaç noktaya dikkat etmelisin.
+                                    Bu yazıda, beyaz eşyalar alırken hangi faktörlere odaklanman gerektiğini detaylı bir
+                                    şekilde anlatacağım.
+                                    Beyaz eşyalar, evin en önemli parçalarındandır. Bu nedenle doğru seçim yapmak, hem
+                                    bütçeni hem de yaşam alanını olumlu etkiler.
+                                    Öncelikle, enerji verimliliği önemli bir kriterdir. Yüksek enerji verimliliğine
+                                    sahip ürünler, uzun vadede tasarruf sağlar. Dolayısıyla, enerji sınıfını kontrol
+                                    etmeyi unutma.
+                                    Ayrıca, marka ve garanti sürelerine de göz atmalısın.
+                                    İyi bir marka genelde daha iyi bir destek sunar.
+                                    Bu konuda dikkat etmen gereken diğer bir unsur ise ürünün boyutlarıdır.
+                                    Beyaz eşyaların yerleşeceği alanları iyi hesaplamalısın.
+                                    Bu sayede, yer sorunu yaşamazsın.
+                                    Bu noktalara dikkat ederek, beyaz eşyalar hakkında nelere dikkat edilmeli konusunda
+                                    bilgi sahibi olabilirsin.
+                                    Son olarak, satın alma sürecinde indirimleri değerlendirmek iyi bir fikir olacaktır.
+                                    Yeni bir beyaz eşyaya ihtiyaç duyduğunda, aşağıdaki unsurları incelemen faydalı
+                                    olur:
+
+                                    Enerji verimliliği: Eşyaların enerji sınıflarını kontrol et.
+
+                                    Büyüklük: Ürünün yerleşeceği alanın ölçülerini dikkate al.
+
+                                    Marka güvenilirliği: İyi bilinen markaları tercih et.
+
+                                    Garanti süreleri: Uzun garanti, ürünün kalitesini gösterir.
+
+                                    Fiyat kıyaslaması: Farklı mağazalarda fiyatları karşılaştır.
+
+                                    Bu özellikler, beyaz eşya alırken dikkat edilmesi gereken temel unsurlardır.
+                                    Beyaz Eşya Alırken Dikkat Edilmesi Gerekenler arasında bu unsurları düşünerek
+                                    alışveriş yapmalısın.
+                                    2023 verilerine göre, kullanıcıların %60’ı enerji verimliliği yüksek ürünleri tercih
+                                    ediyor.
+                                    Bu istatistik, enerji tasarrufunun ne kadar önemli olduğunu gösteriyor. Doğru beyaz
+                                    eşyayı seçerek hem yaşam konforunu artırırsın hem de enerji tasarrufu sağlarsın. Bu
+                                    yüzden, bilinçli bir alışveriş yapmaya özen göster.
+                                </p>
+                                <h1>Beyaz Eşya Alırken Enerji Verimliliği Neden Önemli</h1>
+                                <p>
+                                    Evinizdeki beyaz eşyaların enerji verimliliği, hem bütçenizi etkiler hem de çevreye
+                                    olan katkınız açısından önem taşır. Enerji tasarrufu sağlayan cihazlar, fatura
+                                    maliyetlerini düşürürken, doğal kaynakların kullanımını azaltır. Çağımızda enerji
+                                    verimliliği, tüketicilerin daha bilinçli seçimler yapmasını teşvik eden önemli bir
+                                    faktördür. Gelişen teknoloji ile beraber, enerji verimliliği yüksek ürünlerin sayısı
+                                    artar. Böylece, hem ekonominize katkı sağlar hem de çevre için olumlu bir etki
+                                    yaratır. Beyaz eşyalar, ev aletleri kategorisinde önemli bir yer tutar. Yeni beyaz
+                                    eşyalar alırken enerji verimliliğine dikkat etmek gerekir.
+
+                                    Beyaz eşyalar alırken enerji verimliliği konusunda bazı kriterler göz önünde
+                                    bulundurulmalıdır. Bu kriterler, seçim yaparken size yol gösterir ve doğru ürünü
+                                    bulmanıza yardımcı olur. İşte, bu bağlamda dikkate almanız gereken bazı noktalar:
+
+                                    Enerji etiketini kontrol etmelisiniz. Cihazın enerji sınıfı, verimlilik konusunda
+                                    bilgi verir.
+
+                                    Yıllık enerji tüketim değerlerine dikkat etmelisiniz. Bu, yıllık maliyet hesaplaması
+                                    yapmanıza yardımcı olur.
+
+                                    Ürünlerin özelliklerini değerlendirmelisiniz. Su ve enerji tasarrufu sağlayan
+                                    teknolojilere sahip ürünleri tercih etmelisiniz.
+
+                                    Maliyetle birlikte tasarrufu düşünmelisiniz. Enerji verimli bir ürün başlangıçta
+                                    daha pahalı olabilir ama uzun vadede tasarruf sağlar.
+
+                                    Garanti ve servis süresini kontrol etmelisiniz. Uzun süreli kullanım için önemlidir.
+
+                                    Bu kriterler, beyaz eşyalar hakkında nelere dikkat edilmeli sorusuna cevap verirken,
+                                    enerji verimliliği açısından size rehberlik eder. Günümüzde, enerji verimliliği
+                                    yüksek standartlara sahip cihazların kullanımı artar. Yapılan araştırmalara göre,
+                                    2023 yılı itibarıyla enerji verimliliğine sahip ürün kullanan ev sahiplerinin
+                                    tasarruf oranı %35 civarındadır. Bu sebeple, beyaz eşyalar alırken dikkatli seçim
+                                    yapmak büyük fayda sağlar. Hem enerji tasarrufunu gerçekleştirir hem de bütçenizi
+                                    korursunuz.
+                                </p>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hızlı İşlemler</h3>
+                    <ul>
                         <li><a href="Anasayfa.html">Anasayfa</a></li>
-                        <li class="dropdown">
-                            <a href="hizmet.html">Hizmetlerimiz ▼</a>
-                            <ul class="submenu">
-                                <li><a href="/hizmet?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
-                                <li><a href="/hizmet?service=Buzdolabı">Buzdolabı</a></li>
-                                <li><a href="/hizmet?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
-                                <li><a href="/hizmet?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
-                            </ul>
+                        <li><a href="hizmet.html">Hizmetlerimiz</a></li>
+                        <li><a href="/hizmet?service=Beyaz+Eşya+Servisi" class="btn btn-outline">Beyaz eşya Servisi</a>
                         </li>
+                        <li><a href="/hizmet?service=Buzdolabı+Tamiri" class="btn btn-outline">Buzdolabı Tamiri</a></li>
+                        <li><a href="/hizmet?service=Çamaşır+Makinesi" class="btn btn-outline">Çamaşır Makinesi
+                                Tamiri</a></li>
+                        <li><a href="/hizmet?service=Bulaşık+Makinesi" class="btn btn-outline">Bulaşık Makinesi
+                                Tamiri</a></li>
+                        <li><a href="/hizmet?service=Fırın+Tamiri" class="btn btn-outline">Fırın Tamiri</a></li>
+                        <li><a href="/hizmet?service=Klima" class="btn btn-outline">KlimaTamiri</a></li>
+                        <li><a href="/hizmet?service=Kombi" class="btn btn-outline">Kombi Tamiri</a></li>
+                        <li><a href="/hizmet?service=Televizyon" class="btn btn-outline">Televizyon Tamiri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kurumsal</h3>
+                    <ul>
                         <li><a href="hakkımızda.html">Hakkımızda</a></li>
-                        <li><a href="iletişim.html">İletişim</a></li>
                         <li><a href="gizlilik.html">Gizlilik</a></li>
                         <li><a href="kvkk.html">KVKK</a></li>
                     </ul>
-                </nav>
-            </header>
-            <section class="ana">
-                <div class="container">
-                    <h1 id="service-title">Beyaz Eşya ve Elektronik Cihaz Servisi</h1>
-                    <p id="service-desc">Garantisi bitmiş cihazlarınızda oluşan arızalar için profesyonel çözümler.</p>
-                    <div class="ana-buttons">
-                        <button class="my-button"><a href="Anasayfa?service=Hemen+Arayın+0555+555+55+55" style="color: white; text-decoration: none;">Hemen Arayın: 0555 555 55 55</a></button>
-                    </div>
                 </div>
-            </section>
-            <section class="section">
-                <div class="container">
-                    <div class="service-content" style="display: block;">
-                        <div class="main-content">
-                            <article>
-                                <div id="makale-alani">
-                                    <aside class="sidebar">
-                                        <h2 class="mb-2">Kullanıcı Yorumları</h2>
-                                        <div class="review-list">
-                                        <div class="review-card">
-                                            <div class="rating">★★★★★</div>
-                                            <p>Çamaşır makinemi çok hızlı bir şekilde tamir ettiler. Profesyonel ve uygun fiyatlı bir hizmet aldım.</p>
-                                            <div class="review-author">Ayşe Y. - 10.06.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★★</div>
-                                            <p>Buzdolabımdaki arıza için aynı gün hizmet aldım. Teknik ekip çok bilgili ve yardımcıydı.</p>
-                                            <div class="review-author">Mehmet K. - 22.07.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★☆</div>
-                                            <p>Klimamın bakımı için geldiler. İşlerini düzgün yapıyorlar ama randevu saatinde küçük bir gecikme oldu.</p>
-                                            <div class="review-author">Zeynep A. - 15.08.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★★</div>
-                                            <p>Televizyonumun ekranında oluşan sorun hızlı bir şekilde çözüldü. Teşekkürler!</p>
-                                            <div class="review-author">Ali T. - 03.09.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★★</div>
-                                            <p>Bulaşık makinemizdeki su kaçağı sorunu aynı gün giderildi. Uygun fiyat ve kaliteli hizmet.</p>
-                                            <div class="review-author">Fatma G. - 28.09.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★☆</div>
-                                            <p>Fırınımın ısıtma problemi için servis çağırdım. Sorunu tespit edip çözdüler.</p>
-                                            <div class="review-author">Hasan B. - 12.10.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★★</div>
-                                            <p>Kombimizin yıllık bakımı için tercih ettik. Çok memnun kaldık, kesinlikle tavsiye ederim.</p>
-                                            <div class="review-author">Aylin M. - 05.11.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★★</div>
-                                            <p>Buzdolabının motor arızası için aradım, aynı gün gelip tamir ettiler. Profesyonel hizmet.</p>
-                                            <div class="review-author">Mustafa Y. - 19.11.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★☆</div>
-                                            <p>Çamaşır makinesinin program sorunu vardı. Uygun fiyata hallettiler.</p>
-                                            <div class="review-author">Seda K. - 07.12.2024</div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="rating">★★★★★</div>
-                                            <p>Televizyonumuzun ses sorunu için geldiler. Hızlı ve etkili çözüm sundular.</p>
-                                            <div class="review-author">Emre A. - 22.12.2024</div>
-                                        </div>
-                                        </div>
-                                    </aside>
-                                    <section class="makale-bolum" data-bolum="1">
-                                        <h1>
-                                            İçindekiler
-                                        </h1>
-                                        <p>1.Beyaz Eşya Alırken Enerji Verimliliği Neden Önemli</p>
-                                        <p>2.Ev Aletleri Seçiminde Bütçe Nasıl Planlanmalı</p>
-                                        <p>3.Beyaz Eşya Satın Alma Rehberi: Garanti Koşulları Nelerdir</p>
-                                        <p>4.Yeni Beyaz Eşya Alırken Servis Ağına Dikkat Etmek Neden Gerekli</p>
-                                        <p>5.Beyaz Eşya Kullanım Kılavuzu: Montaj Nasıl Yapılır</p>
-                                        <p>6.Beyaz Eşya Alırken Hangi Özelliklere Öncelik Vermeliyim</p>
-                                        <p>7.Ev Aletleri Seçiminde Tasarımın Önemi Nedir</p>
-                                        <p>8.Beyaz Eşya Satın Alma Rehberi: Kampanyaları Nasıl Takip Ederim</p>
-                                        <p>9.Yeni Beyaz Eşya Alırken İhtiyaç Analizi Nasıl Yapılır</p>
-                                        <p>10. Beyaz Eşya Kullanım Kılavuzu: Temizlik ve Bakım İpuçları</p>
-                                           
-                                        <p>
-                                            Beyaz Eşyalar Hakkında Nelere Dikkat Edilmeli konusu, ev sahipleri için büyük önem taşır.
-                                            Beyaz eşya alırken dikkat edilmesi gerekenler arasında, ürünlerin enerji verimliliği öne çıkar. Enerji sınıfı, elektrik faturasını etkileyen önemli bir faktördür. 
-                                            Düşük enerji tüketimi sunan ürünler, uzun vadede tasarruf sağlar.
-                                            Ayrıca, marka ve model seçimi de satın alma sürecinde önemli bir etkendir.
-                                            Güvenilir markalar, genellikle daha iyi bir hizmet sunar.
-                                            Yeni beyaz eşya alırken, ürünlerin garanti süresi ve servis ağı da dikkat edilmesi gereken unsurlardandır.
-                                            Uzun ömürlü ve sorunsuz bir kullanım için bu detaylar göz önünde bulundurulmalıdır.
-                                            Ev aletleri seçiminde ipuçları, doğru tercih yapmanıza yardımcı olur. 
-                                            Farklı markaların sunduğu özellikleri karşılaştırmak faydalıdır.
-                                            Örneğin, buzdolabı alırken boyut, iç hacim ve bölüm sayısı gibi unsurlar önem taşır.
-                                            Beyaz eşya satın alma rehberi, ihtiyaçlarınıza uygun tercih yapmanızda yol gösterir.
-                                            Kullanım kılavuzu ise cihazların performansını en üst düzeye çıkarır. Yeni beyaz eşyalar, kullanıcılara pek çok kolaylık sunar; ancak bunları doğru seçmek önemlidir.
-                                            Beyaz eşyalar hakkında doğru bilgiye ulaşmak, sağlıklı bir seçim yapmanıza katkı sağlar.   
-                                        </p>
-                                        <h1>Beyaz Eşyalar Hakkında Nelere Dikkat Edilmeli</h1>
-                                        <p>
-                                            Eğer yeni beyaz eşyalar almak istiyorsan birkaç noktaya dikkat etmelisin.
-                                            Bu yazıda, beyaz eşyalar alırken hangi faktörlere odaklanman gerektiğini detaylı bir şekilde anlatacağım. 
-                                            Beyaz eşyalar, evin en önemli parçalarındandır. Bu nedenle doğru seçim yapmak, hem bütçeni hem de yaşam alanını olumlu etkiler.
-                                            Öncelikle, enerji verimliliği önemli bir kriterdir. Yüksek enerji verimliliğine sahip ürünler, uzun vadede tasarruf sağlar. Dolayısıyla, enerji sınıfını kontrol etmeyi unutma.
-                                        </p>
-                                    </section>
-                                </div>
-                            </article>
-                        </div>    
-                    </div>
+                <div class="footer-column">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li><a href="iletişim.html">İletişim</a></li>
+                    </ul>
                 </div>
-            </section>                    
-            <footer>
-                <div class="container">
-                    <div class="footer-content">
-                        <div class="footer-column">
-                            <h3>Hızlı İşlemler</h3>
-                            <ul>
-                                <li><a href="Anasayfa.html">Anasayfa</a></li>
-                                <li><a href="hizmet.html">Hizmetlerimiz</a></li>    
-                                <li><a href="/hizmet?service=Beyaz+Eşya+Servisi" class="btn btn-outline">Beyaz eşya Servisi</a></li>
-                                <li><a href="/hizmet?service=Buzdolabı+Tamiri" class="btn btn-outline">Buzdolabı Tamiri</a></li>
-                                <li><a href="/hizmet?service=Çamaşır+Makinesi" class="btn btn-outline">Çamaşır Makinesi Tamiri</a></li>
-                                <li><a href="/hizmet?service=Bulaşık+Makinesi" class="btn btn-outline">Bulaşık Makinesi Tamiri</a></li>
-                                <li><a href="/hizmet?service=Fırın+Tamiri" class="btn btn-outline">Fırın Tamiri</a></li>
-                                <li><a href="/hizmet?service=Klima" class="btn btn-outline">KlimaTamiri</a></li>
-                                <li><a href="/hizmet?service=Kombi" class="btn btn-outline">Kombi Tamiri</a></li>
-                                <li><a href="/hizmet?service=Televizyon" class="btn btn-outline">Televizyon Tamiri</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-column">
-                            <h3>Kurumsal</h3>
-                            <ul>
-                                <li><a href="hakkımızda.html">Hakkımızda</a></li>
-                                <li><a href="gizlilik.html">Gizlilik</a></li>
-                                <li><a href="kvkk.html">KVKK</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-column">
-                            <h3>İletişim</h3>
-                            <ul>
-                                <li><a href="iletişim.html">İletişim</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                    <p style="margin-left: 50px;">&copy; 2025 Lipyum Teknik Servis. Tüm hakları saklıdır.</p>
-                    <div id="footer-disclaimer" style="margin-left: 50px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:1em; height:1em; vertical-align:middle; margin-right: 5px; fill:currentColor;"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg> Firmamız, bahsi geçen markaların yetkili servisi değildir. Sadece garantisi dolmuş cihazlar için bakım ve onarım hizmeti sunuyoruz.</div>
-            </footer>
-        <script>
-            // Dinamik service parametresini al
-            const params = new URLSearchParams(window.location.search);
-            const service = params.get('service');
+            </div>
+        </div>
+        <p style="margin-left: 50px;">&copy; 2025 Lipyum Teknik Servis. Tüm hakları saklıdır.</p>
+        <div id="footer-disclaimer" style="margin-left: 50px;"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                style="width:1em; height:1em; vertical-align:middle; margin-right: 5px; fill:currentColor;"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z">
+                </path>
+            </svg> Firmamız, bahsi geçen markaların yetkili servisi değildir. Sadece garantisi dolmuş cihazlar için
+            bakım ve onarım hizmeti sunuyoruz.</div>
+    </footer>
+    <script>
+        // Dinamik service parametresini al
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get('service');
 
-            if(service) {
-                // H1 ve açıklamayı güncelle
-                document.getElementById('service-title').textContent = service;
-                document.getElementById('service-desc').textContent = service + " ile ilgili hizmet detayları burada görüntülenecek.";
-            }
-        </script>
-    </body>
+        if (service) {
+            // H1 ve açıklamayı güncelle
+            document.getElementById('service-title').textContent = service;
+            document.getElementById('service-desc').textContent = service + " ile ilgili hizmet detayları burada görüntülenecek.";
+        }
+    </script>
+</body>
+
 </html>
