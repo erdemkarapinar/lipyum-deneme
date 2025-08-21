@@ -186,6 +186,57 @@
             margin-top: 25px;
         }
 
+        .service-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .service-section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        .service-card {
+            max-width: 800px;
+            /* sayfanın ortasında belli genişlik */
+            margin: 0 auto;
+            /* ortalama */
+            background: #ecf0f1;
+            /* card arka plan rengi */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            /* metinler sola hizalı */
+        }
+
+        .service-card p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .call-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #27ae60;
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        .call-btn:hover {
+            background: #219150;
+        }
+
         .my-button {
             background-color: #2F4F4F;
             /* Buton rengi (mavi) */
@@ -209,31 +260,32 @@
             background-color: #2F4F4F;
             /* Fareyle üzerine gelince koyulaşır */
         }
-        .call-floating-btn {
-			position: fixed;
-			right: 20px;
-			/* sağdan boşluk */
-			bottom: 30px;
-			/* alttan boşluk */
-			background-color: #27ae60;
-			color: #fff;
-			padding: 15px 20px;
-			border-radius: 50px;
-			/* yuvarlatılmış görünüm */
-			font-size: 16px;
-			font-weight: 600;
-			text-decoration: none;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-			transition: background 0.3s, transform 0.2s;
-			z-index: 1000;
-			/* her şeyin üstünde olsun */
-		}
 
-		.call-floating-btn:hover {
-			background-color: #219150;
-			transform: scale(1.05);
-			/* hover animasyonu */
-		}
+        .call-floating-btn {
+            position: fixed;
+            right: 20px;
+            /* sağdan boşluk */
+            bottom: 30px;
+            /* alttan boşluk */
+            background-color: #27ae60;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 50px;
+            /* yuvarlatılmış görünüm */
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+            z-index: 1000;
+            /* her şeyin üstünde olsun */
+        }
+
+        .call-floating-btn:hover {
+            background-color: #219150;
+            transform: scale(1.05);
+            /* hover animasyonu */
+        }
     </style>
 </head>
 
@@ -262,20 +314,18 @@
             </ul>
         </nav>
     </header>
-    <section class="hakkimizda">
-        <div class="container">
-            <h1 id="service-title">Profesyonel Beyaz Eşya ve Elektronik Cihaz Tamiriniz Yapılır</h1>
-            <p id="service-desc">Profesyonel Beyaz Eşya ve Elektronik Cihaz Tamiri. Uzman ekibimizle tüm beyaz eşya ve
-                elektronik cihazlarınız için güvenilir, hızlı ve uygun fiyatlı tamir, bakım ve onarım hizmetleri
-                sunuyoruz. Buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın, klima, kombi ve televizyon gibi tüm
-                cihazlarınızda oluşan arızalar için profesyonel çözümler.</p>
-            <div class="hakkimizda-buttons">
-                <button class="my-button"><a onclick="window.location.href='tel:+905555555555'"
-                        style="color: white; text-decoration: none; font-size: 18px; padding: 5px 10px;">Hemen Arayın:
-                        0555 555 55 55 📞</a></button>
-            </div>
+    <section class="service-section">
+        <h2>Hizmetimiz</h2>
+        <div class="service-card">
+            <p><strong>Hizmet adı:</strong> Beyaz Eşya Servisi</p>
+            <p><strong>Hizmet kapsamı:</strong> Uzman ekibimizle beyaz eşyalarınızın bakım ve onarımını yapıyoruz.
+                7/24 servis desteği sunuyoruz.</p>
+            <p><strong>Adres:</strong> Muratpaşa / Antalya</p>
+
+            <a href="tel:+905515048933" class="call-btn">📞 0 (551) 504 89 33</a>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
