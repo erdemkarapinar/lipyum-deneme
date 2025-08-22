@@ -35,37 +35,52 @@
         }
 
         .navbar {
+            display: flex;
+            justify-content: space-between;
+            /* logo solda, menü sağda */
+            align-items: center;
+            background: #2c3e50;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            /* mobil için satır atlatma */
+        }
+
+        .logo a {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        /* Menü */
+        .nav-links {
             list-style: none;
             display: flex;
-            background: #2c3e50;
-            padding: 0px;
+            gap: 20px;
             margin: 0;
-            width: 100%;
+            padding: 0;
         }
 
-        .navbar li {
-            margin-top: 25px;
-            margin-left: 100px;
+        .nav-links li {
+            position: relative;
         }
 
-        .navbar a {
+        .nav-links a {
             color: white;
             text-decoration: none;
-            padding: 8px 12px;
+            padding: 10px 12px;
             display: block;
         }
 
-        .navbar a:hover {
+        .nav-links a:hover {
             background: #555;
             border-radius: 4px;
         }
 
-        /* Dropdown menü */
-        .dropdown {
-            position: relative;
-        }
 
-        /* Alt menü gizli */
+        /* Dropdown menü */
+        /* Dropdown menü */
         .submenu {
             display: none;
             position: absolute;
@@ -73,32 +88,52 @@
             left: 0;
             background: #2c3e50;
             list-style: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
             min-width: 200px;
             z-index: 1000;
         }
 
-        .submenu li {
-            margin-left: 0px;
-            margin-top: 5px;
-        }
-
-        /* Alt menü öğeleri */
         .submenu li a {
-            display: block;
             padding: 10px;
             color: white;
-            text-decoration: none;
         }
 
         .submenu li a:hover {
             background: #666;
         }
 
-        /* Hover ile açma */
         .dropdown:hover .submenu {
             display: block;
+        }
+
+        /* ------------------- */
+        /* Mobil için responsive düzen */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                /* dikey hizala */
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                width: 100%;
+            }
+        }
+
+        .navbar h1 {
+            color: white;
+            text-align: left;
+            white-space: nowrap;
         }
 
         .navbar h1 {
@@ -307,9 +342,11 @@
         📞 Hemen Ara
     </a>
     <header>
-        <nav>
-            <ul class="navbar">
-                <h1 style="margin-left: 10px;"><a href="Anasayfa.html">Lipyum Teknik Servis</a></h1>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="Anasayfa.html">Lipyum Teknik Servis</a>
+            </div>
+            <ul class="nav-links">
                 <li><a href="Anasayfa.html">Anasayfa</a></li>
                 <li class="dropdown">
                     <a href="hizmet.html">Hizmetlerimiz ▼</a>
