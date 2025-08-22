@@ -182,6 +182,11 @@
                 display: flex;
                 margin-left: auto;
             }
+
+            .ana-buttons {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 sütun */
+            }
         }
 
         footer {
@@ -190,9 +195,11 @@
             padding: 50px 20px 20px;
             text-align: center;
         }
-        footer .container{
+
+        footer .container {
             margin: auto 50px;
         }
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -235,24 +242,62 @@
             transition: 0.3s;
         }
 
+        /* Grid düzeni */
         .ana-buttons {
             margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Varsayılan: 3 sütun */
+            gap: 20px;
+            justify-items: center;
+        }
+
+        /* Her buton */
+        .icon-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #006400;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f8f8f8;
+            transition: background 0.3s;
+            width: 100px;
+        }
+
+        .icon-button:hover {
+            background: #e0e0e0;
+        }
+
+        .icon-button span {
+            margin-top: 8px;
+            font-size: 14px;
         }
 
         .my-button {
-            background-color: #2F4F4F;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            display: inline-block;
-        }
-
+			background-color: #2F4F4F;
+			/* Buton rengi (mavi) */
+			color: white;
+			/* Yazı rengi */
+			padding: 10px 20px;
+			/* İç boşluk */
+			border: none;
+			/* Kenarlık yok */
+			border-radius: 5px;
+			/* Köşeleri yuvarla */
+			cursor: pointer;
+			/* Fare üzerine gelince işaretçi */
+			font-size: 16px;
+			/* Yazı boyutu */
+			transition: background-color 0.3s;
+			text-decoration: none;
+			/* Hover efektini yumuşat */
+		}
         .my-button:hover {
-            background-color: #1f3f3f;
+            background-color: #2F4F4F;
+            /* Fareyle üzerine gelince koyulaşır */
         }
 
         .section {
@@ -355,6 +400,11 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+
+            .ana-buttons {
+                grid-template-columns: 1fr;
+                /* Tek sütun */
+            }
         }
     </style>
 </head>
@@ -398,7 +448,30 @@
                 ve elektronik cihazlarınız için güvenilir, hızlı ve uygun fiyatlı tamir, bakım ve onarım hizmetleri
                 sunuyoruz.</p>
             <div class="ana-buttons">
-                <a href="tel:+905555555555" class="my-button">📞 Hemen Arayın: 0555 555 55 55</a>
+                <a href="tel:+905555555555" class="icon-button">
+                    <img src="phone-call-svgrepo-com.svg" alt="Ara" width="40" height="40">
+                    <span>Hemen Ara</span>
+                </a>
+                <a href="tel:+905555555555" class="icon-button">
+                    <img src="certificate-badge-svgrepo-com.svg" alt="Ara" width="40" height="40">
+                    <span>1 Yıl Garanti</span>
+                </a>
+                <a href="tel:+905555555555" class="icon-button">
+                    <img src="time-cronometer-svgrepo-com.svg" alt="Ara" width="40" height="40">
+                    <span>20 Dakika</span>
+                </a>
+                <a href="tel:+905555555555" class="icon-button">
+                    <img src="emoticon-emotion-expression-smile-svgrepo-com.svg" alt="Ara" width="40" height="40">
+                    <span>%100 Mutluluk</span>
+                </a>
+                <a href="tel:+905555555555" class="icon-button">
+                    <img src="money-svgrepo-com.svg" Ara" width="40" height="40">
+                    <span>En Ucuz</span>
+                </a>
+                <a href="tel:+905555555555" class="icon-button">
+                    <img src="shield-check-svgrepo-com.svg" alt="Ara" width="40" height="40">
+                    <span>%100 Güvenilir</span>
+                </a>
             </div>
         </div>
     </section>
