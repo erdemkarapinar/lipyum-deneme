@@ -1,175 +1,487 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ana Sayfa | Lipyum Teknik Servis</title>
-        <meta name="description" content="Beyaz eşya, buzdolabı, çamaşır makinesi, klima ve kombi tamir bakım hizmetleri.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
-        <style>
-        html, body {
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa | Lipyum Teknik Servis</title>
+    <link rel="icon" type="image/x-icon" href="letter-l.png">
+    <meta name="description" content="Beyaz eşya, buzdolabı, çamaşır makinesi, klima ve kombi tamir bakım hizmetleri.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        html,
+        body {
             margin: 0;
             padding: 0;
-            font-family: "Mozilla Headline", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
+            font-family:
+                -apple-system,
+                /* macOS ve iOS */
+                BlinkMacSystemFont,
+                /* Chrome (macOS) */
+                "Segoe UI",
+                /* Windows */
+                Roboto,
+                /* Android */
+                Oxygen, Ubuntu, Cantarell, "Open Sans",
+                /* Linux dağıtımları */
+                Helvetica, Arial,
+                /* Eski fallback */
+                sans-serif;
+            /* En son garanti fallback */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-            main {
-                flex: 1;
-            }
-            .navbar {
-                list-style: none;
-                display: flex;
-                gap: 20px;
-                background: #333;
-                padding: 0px;
-                margin: 0;
-                width: 100%;
-                font-family: "Mozilla Headline", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: 400;
-                font-style: normal;
-                font-variation-settings: "wdth" 100;
-            }
+        .navbar {
+            list-style: none;
+            display: flex;
+            background: #2c3e50;
+            padding: 0px;
+            margin: 0;
+            width: 100%;
+        }
 
-            .navbar li {
-                position: relative;
-                margin-top: 15px;
-                margin-left: 10px;
-            }
+        .navbar li {
+            margin-top: 25px;
+            margin-left: 100px;
+        }
 
-            .navbar a {
-                color: white;
-                text-decoration: none;
-                padding: 8px 12px;
-                display: block;
-            }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+        }
 
-            .navbar a:hover {
-                background: #555;
-                border-radius: 4px;
-            }
+        .navbar a:hover {
+            background: #555;
+            border-radius: 4px;
+        }
 
-            /* Dropdown menü */
-            .dropdown {
-                position: relative;
-            }
+        /* Dropdown menü */
+        .dropdown {
+            position: relative;
+        }
 
-            /* Alt menü gizli */
-            .submenu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background: #444;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                min-width: 200px;
-                z-index: 1000;
-            }
+        /* Alt menü gizli */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #2c3e50;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 200px;
+            z-index: 1000;
+        }
 
-            /* Alt menü öğeleri */
-            .submenu li a {
-                display: block;
-                padding: 10px;
-                color: white;
-                text-decoration: none;
-            }
+        .submenu li {
+            margin-left: 0px;
+            margin-top: 5px;
+        }
 
-            .submenu li a:hover {
-                background: #666;
-            }
+        /* Alt menü öğeleri */
+        .submenu li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
 
-            /* Hover ile açma */
-            .dropdown:hover .submenu {
-                display: block;
-            }
+        .submenu li a:hover {
+            background: #666;
+        }
 
-            .navbar h1 {
-                color: white;
-            }
-            footer {
-                background-color: #333;
-                color: white;
-                padding: 20px 0;
-                text-align: center;
-            }
+        /* Hover ile açma */
+        .dropdown:hover .submenu {
+            display: block;
+        }
 
-            .footer-nav {
-                list-style: none;
-                padding: 0;
-                margin: 0 0 10px 0;
-                display: flex;
-                justify-content: center;
-                gap: 15px;
-            }
+        .navbar h1 {
+            color: white;
+            text-align: left;
+            white-space: nowrap;
+        }
 
-            .footer-nav li a {
-                color: white;
-                text-decoration: none;
-            }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 0 20px;
+            align-items: center;
+            text-align: center;
+        }
 
-            .footer-nav li a:hover {
-                text-decoration: underline;
-            }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 0.25fr);
+            margin-bottom: 40px;
+            margin-left: 250px;
+            text-align: center;
+        }
 
-        </style>
-    </head>
-    <body>
-        <header>
-                <nav>
-                    <ul class="navbar">
-                        <h1 style="margin-left: 10px;"><a href="Anasayfa.html">Lipyum Teknik Servis</a></h1>
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            margin-left: 40px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: var(--footer-text);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+            /* Hover rengi vurgu rengi oldu */
+        }
+
+        .footer-column p {
+            opacity: 0.8;
+        }
+
+        .footer-column p svg {
+            vertical-align: middle;
+            margin-right: 8px;
+            fill: var(--accent-color);
+        }
+
+
+        .hakkimizda {
+            background-color: var(--light-bg);
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .hakkimizda-buttons {
+            margin-top: 25px;
+        }
+
+        .service-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .service-section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        .service-card {
+            max-width: 800px;
+            /* sayfanın ortasında belli genişlik */
+            margin: 0 auto;
+            /* ortalama */
+            background: #ecf0f1;
+            /* card arka plan rengi */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            /* metinler sola hizalı */
+        }
+
+        .service-card p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .call-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #006400;
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        .call-btn:hover {
+            background: #219150;
+        }
+
+        .my-button {
+            background-color: #2F4F4F;
+            /* Buton rengi (mavi) */
+            color: white;
+            /* Yazı rengi */
+            padding: 10px 20px;
+            /* İç boşluk */
+            border: none;
+            /* Kenarlık yok */
+            border-radius: 5px;
+            /* Köşeleri yuvarla */
+            cursor: pointer;
+            /* Fare üzerine gelince işaretçi */
+            font-size: 16px;
+            /* Yazı boyutu */
+            transition: background-color 0.3s;
+            /* Hover efektini yumuşat */
+        }
+
+        .my-button:hover {
+            background-color: #2F4F4F;
+            /* Fareyle üzerine gelince koyulaşır */
+        }
+
+        .call-floating-btn {
+            position: fixed;
+            right: 20px;
+            /* sağdan boşluk */
+            bottom: 30px;
+            /* alttan boşluk */
+            background-color: #006400;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 50px;
+            /* yuvarlatılmış görünüm */
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+            z-index: 1000;
+            /* her şeyin üstünde olsun */
+        }
+
+        .call-floating-btn:hover {
+            background-color: #219150;
+            transform: scale(1.05);
+            /* hover animasyonu */
+        }
+
+        .map-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="tel:+905555555555" class="call-floating-btn">
+        📞 Hemen Ara
+    </a>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <h1 style="margin-left: 10px;"><a href="Anasayfa.html">Lipyum Teknik Servis</a></h1>
+                <li><a href="Anasayfa.html">Anasayfa</a></li>
+                <li class="dropdown">
+                    <a href="hizmet.html">Hizmetlerimiz ▼</a>
+                    <ul class="submenu">
+                        <li><a href="/hizmet?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
+                        <li><a href="/hizmet?service=Buzdolabı">Buzdolabı</a></li>
+                        <li><a href="/hizmet?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
+                        <li><a href="/hizmet?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
+                    </ul>
+                </li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                <li><a href="iletişim.html">İletişim</a></li>
+                <li><a href="gizlilik.html">Gizlilik</a></li>
+                <li><a href="kvkk.html">KVKK</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="service-section">
+        <h2>Gizlilik</h2>
+        <div class="service-card">
+            <p><strong>KVKK Hakkında Bilgilendirme:</strong> 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), 7
+                Nisan 2016 tarihinde yürürlüğe girmiş olup, Türkiye’de kişisel verilerin işlenmesi, korunması ve
+                bireylerin mahremiyet haklarının güvence altına alınması amacıyla hazırlanmıştır. Günümüzde teknolojinin
+                hızla gelişmesi, internet kullanımının yaygınlaşması ve dijital ortamda bilgi paylaşımının artması
+                sebebiyle kişisel verilerin korunması ulusal ve uluslararası ölçekte büyük önem taşımaktadır. Bu
+                bağlamda KVKK, hem bireylerin temel hak ve özgürlüklerini güvence altına almakta hem de kurum ve
+                kuruluşların verileri işlerken uymaları gereken esasları düzenlemektedir.
+            <p>
+                <strong>
+                    KVKK’nın Amacı:
+                </strong>
+                KVKK’nın temel amacı; kişisel verilerin işlenmesinde özel hayatın gizliliğini korumak, veri
+                güvenliğini sağlamak ve bireylerin haklarını güvence altına almaktır. Bu kanun sayesinde kişisel
+                veriler, belirli kurallar çerçevesinde toplanmakta, işlenmekte, saklanmakta ve gerektiğinde
+                silinmektedir. Ayrıca bireyler, kendi verileri üzerinde kontrol hakkına sahip olmaktadır.
+            </p>
+            <p>
+                <strong>
+                    Kişisel Veri Nedir?
+                </strong>
+                KVKK kapsamında kişisel veri, kimliği belirli veya belirlenebilir gerçek kişiye ait her türlü
+                bilgiyi ifade eder. Bu bilgiler; ad, soyad, doğum tarihi, telefon numarası, e-posta adresi,
+                kimlik numarası, sağlık bilgileri, IP adresi veya fotoğraf gibi unsurları kapsar. Özellikle
+                sağlık, biyometrik ve finansal veriler gibi hassas nitelikli kişisel verilerin korunması çok
+                daha sıkı kurallara bağlanmıştır.
+            </p>
+            <ol>
+                <li>
+                    <strong>
+                        Hukuka ve dürüstlük kurallarına uygun olma
+                    </strong>
+                </li>
+                <li>
+                    <strong>
+                        Doğru ve güncel olma
+                    </strong>
+                </li>
+                <li>
+                    <strong>
+                        Belirli, açık ve meşru amaçlarla işlenme
+                    </strong>
+                </li>
+                <li>
+                    <strong>
+                        İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma
+                    </strong>
+                </li>
+                <li>
+                    <strong>
+                        İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme
+                    </strong>
+                </li>
+            </ol>
+            <p>
+                <strong>
+                    Veri Sorumlusunun Yükümlülükleri
+                </strong>
+                KVKK, kişisel verileri işleyen gerçek ve tüzel kişilere “veri sorumlusu” adını vermektedir. Veri
+                sorumluları;
+
+                Verilerin güvenliğini sağlamak,
+
+                Yetkisiz erişimi önlemek,
+
+                Kişisel verilerin hukuka aykırı işlenmesini engellemek,
+
+                İlgili kişileri aydınlatmak ve bilgilendirmek,
+
+                Gerektiğinde Kişisel Verileri Koruma Kurumu’na başvurmak
+                ile yükümlüdürler.
+            </p>
+            <p>
+                <strong>
+                    İlgili Kişilerin Hakları
+                </strong>
+                KVKK, bireylere kendi verileri üzerinde geniş haklar tanımaktadır. İlgili kişiler, veri sorumlusuna
+                başvurarak;
+
+                Kişisel verilerinin işlenip işlenmediğini öğrenme,
+
+                İşlenmişse buna ilişkin bilgi talep etme,
+
+                İşlenme amacını öğrenme,
+
+                Yanlış veya eksik verilerin düzeltilmesini isteme,
+
+                Kanunda öngörülen şartlar çerçevesinde verilerinin silinmesini veya yok edilmesini talep etme,
+
+                Verilerinin yurt içinde veya yurt dışında kimlerle paylaşıldığını öğrenme
+                haklarına sahiptir.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hızlı İşlemler</h3>
+                    <ul>
                         <li><a href="Anasayfa.html">Anasayfa</a></li>
-                        <li class="dropdown">
-                            <a href="hizmet.html">Hizmetlerimiz ▼</a>
-                            <ul class="submenu">
-                                <li><a href="/hizmet?service=Beyaz+Eşya+Servisi">Beyaz Eşya Servisi</a></li>
-                                <li><a href="/hizmet?service=Buzdolabı">Buzdolabı</a></li>
-                                <li><a href="/hizmet?service=Çamaşır+Makinesi">Çamaşır Makinesi</a></li>
-                                <li><a href="/hizmet?service=Bulaşık+Makinesi">Bulaşık Makinesi</a></li>
-                            </ul>
+                        <li><a href="hizmet.html">Hizmetlerimiz</a></li>
+                        <li><a href="/hizmet?service=Beyaz+Eşya+Servisi" class="btn btn-outline">Beyaz eşya Servisi</a>
                         </li>
+                        <li><a href="/hizmet?service=Buzdolabı+Tamiri" class="btn btn-outline">Buzdolabı Tamiri</a></li>
+                        <li><a href="/hizmet?service=Çamaşır+Makinesi" class="btn btn-outline">Çamaşır Makinesi
+                                Tamiri</a></li>
+                        <li><a href="/hizmet?service=Bulaşık+Makinesi" class="btn btn-outline">Bulaşık Makinesi
+                                Tamiri</a></li>
+                        <li><a href="/hizmet?service=Fırın+Tamiri" class="btn btn-outline">Fırın Tamiri</a></li>
+                        <li><a href="/hizmet?service=Klima" class="btn btn-outline">KlimaTamiri</a></li>
+                        <li><a href="/hizmet?service=Kombi" class="btn btn-outline">Kombi Tamiri</a></li>
+                        <li><a href="/hizmet?service=Televizyon" class="btn btn-outline">Televizyon Tamiri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kurumsal</h3>
+                    <ul>
                         <li><a href="hakkımızda.html">Hakkımızda</a></li>
-                        <li><a href="iletişim.html">İletişim</a></li>
                         <li><a href="gizlilik.html">Gizlilik</a></li>
                         <li><a href="kvkk.html">KVKK</a></li>
                     </ul>
-                </nav>
-            </header>
-        <main>
-            <h1 id="service-title">Hizmet Başlığı</h1>
-            <p id="service-desc">Hizmet açıklaması buraya gelecek.</p>
-        </main>
-        <footer>
-                <ul class="footer-nav">
-                    <li><a href="Anasayfa.html">Anasayfa</a></li>
-                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
-                    <li><a href="iletişim.html">İletişim</a></li>
-                    <li><a href="gizlilik.html">Gizlilik</a></li>
-                    <li><a href="kvkk.html">KVKK</a></li>
-                </ul>
-                <p>&copy; 2025 Lipyum Teknik Servis. Tüm hakları saklıdır.</p>
-            </footer>
-        <script>
-            // Dinamik service parametresini al
-            const params = new URLSearchParams(window.location.search);
-            const service = params.get('service');
+                </div>
+                <div class="footer-column">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li><a href="iletişim.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p style="margin-left: 50px;">&copy; 2025 Lipyum Teknik Servis. Tüm hakları saklıdır.</p>
+        <div id="footer-disclaimer" style="margin-left: 50px;"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                style="width:1em; height:1em; vertical-align:middle; margin-right: 5px; fill:currentColor;"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z">
+                </path>
+            </svg> Firmamız, bahsi geçen markaların yetkili servisi değildir. Sadece garantisi dolmuş cihazlar için
+            bakım ve onarım hizmeti sunuyoruz.</div>
+    </footer>
+    <script>
+        // Dinamik service parametresini al
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get('service');
 
-            if(service) {
-                // H1 ve açıklamayı güncelle
-                document.getElementById('service-title').textContent = service;
-                document.getElementById('service-desc').textContent = service + " ile ilgili hizmet detayları burada görüntülenecek.";
-            }
-        </script>
-    </body>
+        if (service) {
+            // H1 ve açıklamayı güncelle
+            document.getElementById('service-title').textContent = service;
+            document.getElementById('service-desc').textContent = service + " ile ilgili hizmet detayları burada görüntülenecek.";
+        }
+    </script>
+</body>
+
 </html>
