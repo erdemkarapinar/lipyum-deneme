@@ -239,16 +239,25 @@
 		.my-button {
 			background-color: #0073CC;
 			color: white;
-			padding: 10px 20px;
+			padding: 10px;
 			border: none;
-			border-radius: 5px;
+			border-radius: 30px;
 			cursor: pointer;
 			font-size: 16px;
 			transition: background-color 0.3s;
 			text-decoration: none;
+
 			display: flex;
+			justify-content: center;
+			/* içeriği ortala */
 			align-items: center;
 			gap: 8px;
+
+			width: 100%;
+			/* eşit genişlik */
+			box-sizing: border-box;
+			/* padding genişliği bozmasın */
+			text-align: center;
 		}
 
 		.my-button:hover {
@@ -428,7 +437,7 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 15px;
-			max-width: 600px;
+			max-width: 400px;
 			margin: 30px auto;
 			text-align: left;
 		}
@@ -459,9 +468,6 @@
 
 
 		@media (max-width: 480px) {
-			.button-grid {
-				grid-template-columns: 1fr;
-			}
 
 			.service-cards {
 				grid-template-columns: 1fr;
@@ -2845,12 +2851,12 @@
 					<ul>
 						<li><a href="iletişim.html">İletişim</a></li>
 						<li><a href="https://www.instagram.com/#" target="_blank" aria-label="Instagram">
-                                <img src="instagram-icon.svg" alt="Instagram" width="30" height="30"></li>
-                        <li><a href="https://x.com/#" target="_blank" aria-label="X (Twitter)">
-                                <img src="x-icon.svg" alt="X" width="30" height="30"></li>
-                        <li><a href="https://www.facebook.com/#" target="_blank" aria-label="Facebook">
-                                <img src="facebook-icon.svg" alt="Facebook" width="40" height="40">
-                            </a></li>
+								<img src="instagram-icon.svg" alt="Instagram" width="30" height="30"></li>
+						<li><a href="https://x.com/#" target="_blank" aria-label="X (Twitter)">
+								<img src="x-icon.svg" alt="X" width="30" height="30"></li>
+						<li><a href="https://www.facebook.com/#" target="_blank" aria-label="Facebook">
+								<img src="facebook-icon.svg" alt="Facebook" width="40" height="40">
+							</a></li>
 					</ul>
 				</div>
 			</div>
