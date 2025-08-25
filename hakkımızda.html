@@ -408,6 +408,11 @@
             <div class="logo">
                 <a href="Anasayfa.html">Lipyum Teknik Servis</a>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="Anasayfa.html">Anasayfa</a></li>
                 <li class="dropdown">
@@ -558,14 +563,33 @@
             bakım ve onarım hizmeti sunuyoruz.</p>
     </footer>
     <script>
-        // Dinamik service parametresini al
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        // Dropdown tıklama açma
+        const dropdowns = document.querySelectorAll('.dropdown > a');
+        dropdowns.forEach(drop => {
+            drop.addEventListener('click', e => {
+                // Eğer ekranda hamburger menü görünüyorsa (mobil) sadece menüyü aç/kapa
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const parent = drop.parentElement;
+                    parent.classList.toggle('open');
+                }
+                // Masaüstünde tıklayınca normal şekilde hizmet.html'e gidecek
+            });
+        });
+
+        // Dinamik service parametresi
         const params = new URLSearchParams(window.location.search);
         const service = params.get('service');
 
         if (service) {
-            // H1 ve açıklamayı güncelle
-            document.getElementById('service-title').textContent = service;
-            document.getElementById('service-desc').textContent = service + " ile ilgili hizmet detayları burada görüntülenecek.";
+            document.getElementById('main-service-title').textContent = service;
+            document.getElementById('main-service-desc').textContent = service + " ile ilgili hizmet detayları burada görüntülenecek.";
         }
     </script>
 </body>
