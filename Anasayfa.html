@@ -184,8 +184,8 @@
             }
 
             .ana-buttons {
-                grid-template-columns: repeat(2, 1fr);
-                /* 2 sütun */
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
             }
         }
 
@@ -247,8 +247,8 @@
             margin-top: 25px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            /* Varsayılan: 3 sütun */
-            gap: 20px;
+            gap: 15px;
+            /* Desktop boşluğu */
             justify-items: center;
         }
 
@@ -426,8 +426,17 @@
             }
 
             .ana-buttons {
-                grid-template-columns: 1fr;
-                /* Tek sütun */
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+
+            .ana-buttons .icon-button {
+                width: 100px;
+                padding: 18px;
+            }
+
+            .ana-buttons .icon-button span {
+                font-size: 15px;
             }
         }
     </style>
